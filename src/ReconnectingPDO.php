@@ -323,7 +323,7 @@ class ReconnectingPDO extends PDO
                 //noop
                 break;
             default:
-                $this->connection->query('SELECT 1');
+                @$this->connection->query('SELECT 1');
                 break;
         }
     }
